@@ -14,3 +14,43 @@
     align-items: center; /* Vertical centering */
     height: 100vh; /* Full viewport height */
 }
+
+form[role="search"] .hw-combobox__input[type="search"] {
+    border-top-left-radius: var(--pico-border-radius);
+    border-bottom-left-radius: var(--pico-border-radius);
+}
+
+.hw-combobox {
+    position: relative;
+}
+
+.hw-combobox__listbox {
+    position: absolute;
+}
+
+.hw-combobox__option {
+    background-color: var(--pico-dropdown-background-color);
+    padding: var(--pico-nav-link-spacing-vertical) var(--pico-nav-link-spacing-horizontal);
+    user-select: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hw-combobox__option:hover,
+.hw-combobox__option--navigated,
+.hw-combobox__option--selected {
+    background-color: var(--pico-dropdown-hover-background-color);
+}
+
+.hw-combobox__main__wrapper ul li {
+    list-style: none;
+}
+
+.hw-combobox__listbox {
+    margin-bottom: 0;
+}
+
+.hw_combobox__pagination__wrapper {
+    margin-bottom: 0;
+}

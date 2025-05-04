@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&format=json&q=Apple%20Park%20Way,%20Cupertino,%20Santa%20Clara%20County,%20California,%2095014,%20United%20States
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 04 May 2025 08:04:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1363'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicGxhY2VfaWQiOjMwMTg4Njk3NCwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJvc21fdHlwZSI6IndheSIsIm9zbV9pZCI6NTA5NjU1NDI5LCJsYXQiOiIzNy4zMzQ5MzcyIiwibG9uIjoiLTEyMi4wMTI2OTM2IiwiY2xhc3MiOiJoaWdod2F5IiwidHlwZSI6InVuY2xhc3NpZmllZCIsInBsYWNlX3JhbmsiOjI2LCJpbXBvcnRhbmNlIjowLjA1MzM5MjY0NTkxNDM5Njg1LCJhZGRyZXNzdHlwZSI6InJvYWQiLCJuYW1lIjoiQXBwbGUgUGFyayBXYXkiLCJkaXNwbGF5X25hbWUiOiJBcHBsZSBQYXJrIFdheSwgQ3VwZXJ0aW5vLCBTYW50YSBDbGFyYSBDb3VudHksIENhbGlmb3JuaWEsIDk1MDE0LCBVbml0ZWQgU3RhdGVzIiwiYWRkcmVzcyI6eyJyb2FkIjoiQXBwbGUgUGFyayBXYXkiLCJjaXR5IjoiQ3VwZXJ0aW5vIiwiY291bnR5IjoiU2FudGEgQ2xhcmEgQ291bnR5Iiwic3RhdGUiOiJDYWxpZm9ybmlhIiwiSVNPMzE2Ni0yLWx2bDQiOiJVUy1DQSIsInBvc3Rjb2RlIjoiOTUwMTQiLCJjb3VudHJ5IjoiVW5pdGVkIFN0YXRlcyIsImNvdW50cnlfY29kZSI6InVzIn0sImJvdW5kaW5nYm94IjpbIjM3LjMzNDczOTQiLCIzNy4zMzUwMTMxIiwiLTEyMi4wMTMwMTAxIiwiLTEyMi4wMTI0MzczIl19LHsicGxhY2VfaWQiOjI5OTQwMTI0NSwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJvc21fdHlwZSI6IndheSIsIm9zbV9pZCI6Nzc5NDk2NjI3LCJsYXQiOiIzNy4zMzEyMTkxIiwibG9uIjoiLTEyMi4wMTIwNTgwIiwiY2xhc3MiOiJoaWdod2F5IiwidHlwZSI6InVuY2xhc3NpZmllZCIsInBsYWNlX3JhbmsiOjI2LCJpbXBvcnRhbmNlIjowLjA1MzM5ODkwODIxNjk4MzI2LCJhZGRyZXNzdHlwZSI6InJvYWQiLCJuYW1lIjoiQXBwbGUgUGFyayBXYXkiLCJkaXNwbGF5X25hbWUiOiJBcHBsZSBQYXJrIFdheSwgQ3VwZXJ0aW5vLCBTYW50YSBDbGFyYSBDb3VudHksIENhbGlmb3JuaWEsIDk1MTI5LCBVbml0ZWQgU3RhdGVzIiwiYWRkcmVzcyI6eyJyb2FkIjoiQXBwbGUgUGFyayBXYXkiLCJjaXR5IjoiQ3VwZXJ0aW5vIiwiY291bnR5IjoiU2FudGEgQ2xhcmEgQ291bnR5Iiwic3RhdGUiOiJDYWxpZm9ybmlhIiwiSVNPMzE2Ni0yLWx2bDQiOiJVUy1DQSIsInBvc3Rjb2RlIjoiOTUxMjkiLCJjb3VudHJ5IjoiVW5pdGVkIFN0YXRlcyIsImNvdW50cnlfY29kZSI6InVzIn0sImJvdW5kaW5nYm94IjpbIjM3LjMzMDgzMjMiLCIzNy4zMzE1ODE2IiwiLTEyMi4wMTIwNjI2IiwiLTEyMi4wMTE3NjgxIl19XQ==
+  recorded_at: Sun, 04 May 2025 08:04:50 GMT
+recorded_with: VCR 6.3.1

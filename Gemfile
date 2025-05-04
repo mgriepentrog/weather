@@ -60,6 +60,12 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem "vcr"
+  gem "webmock"
 end
 
 gem "geocoder", "~> 1.8"
+
+gem "hotwire_combobox", "~> 0.4.0"
+
+gem "rbs", "~> 3.9"

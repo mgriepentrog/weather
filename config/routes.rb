@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :weather, only: [ :show ] do
     get "search", on: :collection
+    get "suggestions", on: :collection
   end
   # Defines the root path route ("/")
   # root "posts#index"

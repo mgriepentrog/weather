@@ -1,6 +1,15 @@
 ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
+require "vcr"
+
+VCR.configure do |c|
+  c.hook_into :webmock
+  c.cassette_library_dir = "test/vcr_cassettes"
+  c.default_cassette_options = {
+    match_requests_on: [:method, :host, :path]
+  }
+end
 
 module ActiveSupport
   class TestCase
