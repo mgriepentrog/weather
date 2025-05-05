@@ -1,0 +1,5 @@
+<div style="display: flex; flex-direction: column; flex: 0 0 auto; min-width: 100px; align-items: center; padding: 8px;">
+  <%= Time.parse(time).strftime("%a") %>
+  <%= render_wmo_code(weather_code, true, size: "fa-2xl") %>
+  <%= "#{max.round}° / #{min.round}°" %>
+</div>

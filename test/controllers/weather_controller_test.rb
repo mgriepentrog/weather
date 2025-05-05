@@ -1,5 +1,5 @@
 require "test_helper"
-require 'webmock/minitest'
+require "webmock/minitest"
 
 class WeatherControllerTest < ActionDispatch::IntegrationTest
   teardown do
@@ -10,9 +10,9 @@ class WeatherControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  class Search < self
+  class Forecast < self
     test "should redirect if no location" do
-      get search_weather_index_path
+      get forecast_weather_index_path
       assert_redirected_to root_path
     end
   end

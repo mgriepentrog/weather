@@ -1,0 +1,58 @@
+module WeatherService
+  class ForecastResponse
+    def self.from_hash: -> ForecastResponse
+
+    attr_reader latitude: Float
+    attr_reader longitude: Float
+
+    attr_reader current_units: CurrentUnits
+    attr_reader current: Current
+
+    attr_reader hourly_units: HourlyUnits?
+    attr_reader hourly: Hourly?
+
+    attr_reader daily_units: DailyUnits
+
+    class CurrentUnits < ::Data
+      attr_reader time: String
+      attr_reader interval: String
+      attr_reader temperature_2m: String
+      attr_reader weather_code: String
+      attr_reader is_day: String
+    end
+
+    class Current < ::Data
+      attr_reader time: String
+      attr_reader interval: Integer
+      attr_reader temperature_2m: Float
+      attr_reader weather_code: Integer
+      attr_reader is_day: bool
+    end
+
+    class HourlyUnits < ::Data
+    end
+
+    class Hourly < ::Data
+      attr_reader time: Array[String]
+      attr_reader temperature: Array[Float]
+    end
+
+    class DailyUnits < ::Data
+      attr_reader time: String
+      attr_reader temperature_2m_max: String
+      attr_reader temperature_2m_min: String
+      attr_reader weather_code: String
+      attr_reader sunrise: String
+      attr_reader sunset: String
+    end
+
+    class Daily < ::Data
+      attr_reader time: Array[String]
+      attr_reader temperature_2m_max: Array[Float]
+      attr_reader temperature_2m_min: Array[Float]
+      attr_reader weather_code: Array[Integer]
+      attr_reader sunrise: Array[Time]
+      attr_reader sunset: Array[Time]
+    end
+  end
+end

@@ -1,0 +1,19 @@
+module WeatherService
+  class Client
+    BASE_URI: String
+
+    def forecast: (latitude: Float, longitude: Float) -> ForecastResponse
+
+    private
+
+    def get: (String, query: Hash[Symbol, Float | String]) -> ForecastResponse
+  end
+
+  self.@client: Client
+
+  @latitude: Float
+
+  @longitude: Float
+
+  def self.client: -> Client
+end

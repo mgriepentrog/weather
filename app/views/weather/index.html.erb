@@ -1,6 +1,9 @@
 <div class="container">
-  <%= form_with url: search_weather_index_path, method: :get, html: { role: "search" } do |form| %>
-    <%= form.combobox :location, suggestions_weather_index_path, mobile_at: "0px", type: :search %>
-    <%= form.submit "Search" %>
-  <% end %>
+  <section style="min-width: 50%">
+    <%= render partial: "errors" %>
+    <%= form_with url: forecast_weather_index_path, method: :get, html: { role: "search" } do |form| %>
+      <%= form.combobox :location, suggestions_weather_index_path, mobile_at: "0px", type: :search %>
+      <%= form.submit "Search" %>
+    <% end %>
+  </section>
 </div>

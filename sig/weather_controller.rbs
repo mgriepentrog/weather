@@ -1,0 +1,5 @@
+class WeatherController
+  @cache_miss: bool
+  @current: WeatherService::ForecastResponse::Current
+  @forecast: WeatherService::ForecastResponse
+end

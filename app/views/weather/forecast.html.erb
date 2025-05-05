@@ -1,0 +1,36 @@
+<main class="container">
+  <section style="max-width: 50%">
+    <%= render partial: "errors" %>
+    <%= form_with url: forecast_weather_index_path, method: :get, html: { role: "search" } do |form| %>
+      <%= form.combobox :location, suggestions_weather_index_path, mobile_at: "0px", type: :search %>
+      <%= form.submit "Search" %>
+    <% end %>
+    <article>
+      <header><h3 style="margin-bottom: 0"><%= @city %></h3></header>
+
+      <div style="display: flex; justify-content: space-around">
+        <div style="flex: .8">
+          <%= @date %>
+          <h1><%= @current_temperature.round %><%= @temperature_unit %></h1>
+          High: <%= @high.round %><%= @temperature_unit %>
+          Low: <%= @low.round %><%= @temperature_unit %>
+        </div>
+        <%= render_wmo_code(@wmo_code, @is_day) %>
+      </div>
+      <div class="overflow-auto" style="display: flex; flex-direction: row">
+        <% @daily_length.times do |i| %>
+          <%= render partial: "forecast", locals: {
+            time: @forecast.daily.time[i],
+            min: @forecast.daily.temperature_2m_min[i],
+            max: @forecast.daily.temperature_2m_max[i],
+            weather_code: @forecast.daily.weather_code[i]
+          } %>
+        <% end %>
+      </div>
+      <footer>Cached: <%= !@cache_miss %><small><%# @forecast.inspect %></small></footer>
+    </article>
+  </section>
+
+  <%#= @result.inspect %>
+  <%#= @response.inspect %>
+</main>
