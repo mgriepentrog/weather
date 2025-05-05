@@ -39,19 +39,15 @@ module WeatherService
     end
 
     class CurrentUnits < Data.define(:time, :interval, :temperature_2m, :weather_code)
-
     end
 
     class Current < Data.define(:time, :interval, :temperature_2m, :weather_code)
-
     end
 
     class HourlyUnits < Data.define(:time, :temperature_2m, :relative_humidity_2m, :wind_speed_10m)
-
     end
 
     class Hourly < Data.define(:time, :temperature_2m, :relative_humidity_2m, :wind_speed_10m)
-
     end
 
     class DailyUnits < Data.define(:time, :temperature_2m_max, :temperature_2m_min, :precipitation_probability_max, :weather_code, :sunrise, :sunset)

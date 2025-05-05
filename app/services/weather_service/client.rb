@@ -1,7 +1,6 @@
 require "net/http"
 module WeatherService
   class Client
-
     BASE_URI = "https://api.open-meteo.com/v1"
 
     def forecast(latitude:, longitude:)

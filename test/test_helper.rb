@@ -7,7 +7,7 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.cassette_library_dir = "test/vcr_cassettes"
   c.default_cassette_options = {
-    match_requests_on: [:method, :host, :path]
+    match_requests_on: [ :method, :host, :path ]
   }
 end
 
